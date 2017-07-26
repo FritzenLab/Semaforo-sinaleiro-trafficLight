@@ -3,9 +3,9 @@
 #define luzVerde 4
 
 int tickDoRelogio = 0;
-int tempoAmarelo = 5;
-int tempoVermelho = 6;
-int tempoReinicia = 15;
+int tempoAmarelo = 2;
+int tempoVermelho = 3;
+int tempoReinicia = 5;
 
 
 // Variables used for timing
@@ -37,7 +37,7 @@ void loop() {
       ligaVerde();
     } else if ((tickDoRelogio >= tempoAmarelo) && (tickDoRelogio <= tempoVermelho)){
       ligaAmarelo();       
-    } else if ((tickDoRelogio > tempoVermelho) && (tickDoRelogio <= tempoReinicia)){
+    } else if ((tickDoRelogio > tempoVermelho) && (tickDoRelogio < tempoReinicia)){
       ligaVermelho();
     } else{
       tickDoRelogio = 0;
